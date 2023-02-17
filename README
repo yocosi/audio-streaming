@@ -1,0 +1,30 @@
+Pour faire fonctionner la sortie audio sur des systèmes Linux modernes
+il faut exécuter les programmes en rajoutant le mot "padsp" devant le
+nom du programme. Par exemple, au lieu de lancer:
+./a.out
+
+il faut lancer:
+padsp ./a.out
+
+
+
+
+Binôme : Romano Mélanie, Amari Pierre
+Groupe : 3.2
+##########################################################################
+
+Réponses aux questions de la Partie 1 (lecteur.c) :
+
+1) Lorsqu'on déclare une fausse fréquence d'échantillonage à la sortie audio la vitesse de lecture est modifiée.
+   Si la fréquence augmente alors F = 1/T donc T diminue ce qui signifie la vitesse de lecture est plus rapide. Et inversement.
+
+2) Lorsqu'on déclare à la sortie audio que le fichier est mono alors qu'il est en réalité en stéréo, ça gresille.
+   Car de Stéréo à Mono les samples sont 2 fois moins importants (en mono).
+
+3) Lorsqu'on déclare à la sortie audio une mauvaise taille d'échantillons (8 bits à la place de 16 bits), Le son est le même mais entrecoupé de grésillements.
+   De 16 bits signés vers 8 bits non signés, les informations signées ne sont plus considérées comme telles, et donc sont transformées en de "mauvaises" valeurs.
+
+##########################################################################
+
+
+
